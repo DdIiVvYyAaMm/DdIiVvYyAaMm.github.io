@@ -1,0 +1,219 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c;
+    color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Center the initial content vertically and horizontally */
+.intro-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    text-align: center;
+    position: relative;
+    padding: 60px 20px;
+}
+
+
+/* .intro-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    background: url('Divyam.jpg') no-repeat center center;
+    background-size: 150px 150px; 
+    background-blend-mode: overlay;
+    background-position: center; 
+    background-repeat: no-repeat;
+} */
+
+.thumbnail {
+    width: 180px; /* Adjust size as needed */
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px; /* Spacing between thumbnail and name */
+    object-fit: cover; /* Ensure the image fits the circle */
+    border: 4px solid #f4f4f4; /* Optional: Add a border */
+}
+
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #aaaaaa;
+}
+
+main .introduction {
+    margin: 30px 0;
+    font-size: 1.2rem;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links ul li {
+    margin: 20px 0;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: #4aa3df;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.links ul li a:hover {
+    color: #80c4ff;
+}
+
+/* CV Section Styling */
+.cv-section {
+    padding: 40px 20px;
+    background-color: #282828;
+    border-radius: 50px;
+    color: #80c4ff;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.cv-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cv-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cv-item {
+    margin-bottom: 40px;
+}
+
+.cv-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.cv-item p, .cv-item ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #aaaaaa;
+}
+
+.cv-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.cv-section a {
+    color: #FFD700; /* This is the hex code for a bright yellow */
+    text-decoration: none; /* Remove underline if you want a cleaner look */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.cv-section a:hover {
+    color: #FFC107; /* Slightly different shade of yellow on hover */
+}
+
+/* Ensure smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Space%20Grotesk:700|Space%20Grotesk:400');
+
+:root {
+/*  change this for scaling  */
+  --m: 2rem;
+  
+  --red: #FF6565;
+  --pink: #FF64F9;
+  --purple: #6B5FFF;
+  --blue: #4D8AFF;
+  --green: #5BFF89;
+  --yellow: #FFEE55;
+  --orange: #FF6D1B;
+  
+}
+/* body {
+  background-color: #141516;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+} */
+
+button {
+  border: calc(0.08 * var(--m)) solid transparent;
+  position: relative;
+  color: #F3F3F3;
+  font-family: 'Space Grotesk';
+  font-size: var(--m);
+  border-radius: calc(0.7 * var(--m));
+  padding: calc(0.5 * var(--m)) calc(1 * var(--m));
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  
+  background:linear-gradient(#121213, #121213), linear-gradient(#121213 50%, rgba(18, 18, 19, 0.6) 80%, rgba(18, 18, 19, 0)),  linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+  background-origin: border-box;
+  background-clip: padding-box, border-box, border-box;
+  background-size: 200%;
+  animation: animate 2s infinite linear;
+}
+
+button::before {
+  content: '';
+  background: linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+  height: 30%;
+  width: 60%;
+  position: absolute;
+  bottom: -20%;
+  z-index: -5;
+  background-size: 200%;
+  animation: animate 2s infinite linear;
+  filter: blur(calc(0.8 * var(--m)));
+}
+
+button:hover, button:hover::before {
+  animation: animate 0.5s infinite linear;
+}
+
+@keyframes animate {
+  0% {background-position: 0}
+  100% {background-position: 200%}
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --m: 2rem;
+  }
+}
