@@ -397,7 +397,7 @@ button:hover, button:hover::before {
 }
 
 /* Responsive Adjustments */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .top-header {
         flex-direction: column;
         align-items: flex-start;
@@ -413,5 +413,5 @@ button:hover, button:hover::before {
     .recent-link {
         margin-left: 10px;
     }
-}
+} */ 
 
