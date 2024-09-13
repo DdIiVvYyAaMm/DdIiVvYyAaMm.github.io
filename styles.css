@@ -357,7 +357,7 @@ button:hover, button:hover::before {
 
 .header-right {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
     margin-left: auto;
     margin-right: 100px;
